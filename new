@@ -1,0 +1,29 @@
+Create a project called SimpleRestaurant with classes:
+• SimpleRestaurant (main class), and
+• Food (object class)
+The (beginning of) the UML specifications for Food is:
+Food
+- name: String
+- glutenFree: boolean
+- price: Double
+- calories: Integer
++ EDIBLE: Boolean (always true)
+Each instance variable (class field) must have a sensible default value assigned. Note the capitalization on price and
+calories: these are primitive objects.
++ Food()
++ Food(name: String, calories: int)
++ Food(name: String, calories: int, glutenFree: Boolean, price: double)
+Each constructor that has parameters must call appropriate setter method(s) and/or an earlier constructor.
++ standard accessor (“getter”) and mutator (“setter”) methods for each field
++ toString(): String that overrides the method automatically inherited from Object
+Make sure your setter methods throw an appropriate type of Exception when given an invalid parameter. A Food’s
+name cannot be null, empty, or blank. Neither price nor calories can be negative.
+SimpleRestaurant is a runner class with only a main method that does the following:
+1. Thank the delivery person (user) for bringing a shipment of Foods.
+2. Ask the delivery person how many types of Food are being delivered until they enter a non-negative integer. Be
+sure to handle bad input using try-catch.
+3. Ask the delivery person for the key info for each Food. Once given a full list of info for a Food item, store it in an
+array of Food. Be sure to handle bad inputs using try-catch, and ask the user each question until they enter
+something correct for each field (name, number of calories, gluten-free status, price).
+4. Print “RESTAURANT MENU:” followed by each Food item in a standard format of your choice using your
+toString() method.
